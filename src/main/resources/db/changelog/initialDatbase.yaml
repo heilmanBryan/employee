@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      author: Bryan Heilman
+      id: initialDatabase
+      changes:
+        - createTable:
+            tableName: Employees
+            columns:
+              - column:
+                  name: id
+                  type: integer
+              - column:
+                  name: firstName
+                  type: varchar(10)
+              - column:
+                  name: lastName
+                  type: varchar(15)
+              - column:
+                  name: role
+                  type: varchar(20)
+              - column:
+                  name: company
+                  type: varchar(30)
+              - column:
+                  name: salary
+                  type: decimal
+
+
+
+
