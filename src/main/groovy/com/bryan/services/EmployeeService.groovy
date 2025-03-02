@@ -16,10 +16,15 @@ class EmployeeService {
     @Autowired
     EmployeeRepository repository
 
-    List<EmployeeEntity> getAllEmployees() {
+    List<Employee> getAllEmployees() {
         def employeeEntities = repository.findAll()
         employeeEntities
-        //mapper.map(employeeEntities, List<Employee>)
+        mapper.map(employeeEntities, List<Employee>)
+    }
+
+    void createNewEmployee(Employee employee){
+        def entity=  mapper.map(employee, EmployeeEntity)
+        repository.save(entity)
     }
 
 }

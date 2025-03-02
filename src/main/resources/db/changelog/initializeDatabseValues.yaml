@@ -4,4 +4,4 @@ databaseChangeLog:
       id: "initializeDatabaseValues"
       changes:
         - sqlFile:
-            path:
+            path: db/changelog/createInitialData.sql

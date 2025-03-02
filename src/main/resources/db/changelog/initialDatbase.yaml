@@ -9,6 +9,7 @@ databaseChangeLog:
               - column:
                   name: id
                   type: integer
+                  autoIncrement: true
               - column:
                   name: firstName
                   type: varchar(10)

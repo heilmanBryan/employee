@@ -12,7 +12,7 @@ import jakarta.persistence.Table
 @Table(name = 'Employees')
 class EmployeeEntity {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     Integer id
     String firstName
     String lastName

@@ -10,4 +10,5 @@ class Employee {
     Company company
     Role role
     BigDecimal salary
+    String middleName
 }

@@ -1,1 +1,1 @@
-Insert Into Employees (firstName, lastName, role, company, salary) VALUES ('Bryan', 'Heilman','developer', 'MUTUAL_OF_OMAHA', 105000)
+Insert Into Employees (firstName, lastName, role, company, salary) VALUES ('Bryan', 'Heilman','DEVELOPER', 'MUTUAL_OF_OMAHA', 105000)
