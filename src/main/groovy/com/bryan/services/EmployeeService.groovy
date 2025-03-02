@@ -22,9 +22,10 @@ class EmployeeService {
         mapper.map(employeeEntities, List<Employee>)
     }
 
-    void createNewEmployee(Employee employee){
+    EmployeeEntity createNewEmployee(Employee employee){
         def entity=  mapper.map(employee, EmployeeEntity)
         repository.save(entity)
+        entity
     }
 
 }
