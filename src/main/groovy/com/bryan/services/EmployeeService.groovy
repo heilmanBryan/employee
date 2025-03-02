@@ -19,7 +19,6 @@ class EmployeeService {
     List<EmployeeEntity> getAllEmployees() {
         def employeeEntities = repository.findAll()
         employeeEntities
-        //mapper.map(employeeEntities, List<Employee>)
     }
 
 }
