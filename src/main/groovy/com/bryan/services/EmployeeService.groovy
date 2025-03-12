@@ -18,15 +18,12 @@ class EmployeeService {
 
     List<Employee> getAllEmployees() {
         def employeeEntities = repository.findAll()
-        employeeEntities
         mapper.map(employeeEntities, List<Employee>)
     }
 
     EmployeeEntity createNewEmployee(Employee employee){
         def entity=  mapper.map(employee, EmployeeEntity)
         repository.save(entity)
-//        test 3
-        // another ssh3 change
         entity
     }
 
