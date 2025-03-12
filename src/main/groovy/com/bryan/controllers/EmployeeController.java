@@ -14,24 +14,23 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 
 @Controller
-@RequestMapping('employees')
-class EmployeeController {
+@RequestMapping("employees")
+public class EmployeeController {
 
     @Autowired
-    EmployeeService employeeService
+    private EmployeeService employeeService;
 
     @Autowired
-    ModelMapper mapper
+    private ModelMapper mapper;
 
     @GetMapping
-    ResponseEntity<List<EmployeeEntity>> getAllEmployees() {
-        new ResponseEntity(employeeService.getAllEmployees(), HttpStatusCode.valueOf(200))
+    public ResponseEntity<List<EmployeeEntity>> getAllEmployees() {
+        return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatusCode.);
     }
 
     @PostMapping
-    def createNewEmployee(@RequestBody Employee employee) {
-        employeeService.createNewEmployee(employee)
-        new ResponseEntity(HttpStatusCode.valueOf(201))
+    public ResponseEntity<Void> createNewEmployee(@RequestBody Employee employee) {
+        employeeService.createNewEmployee(employee);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
-
 }
